@@ -1,0 +1,75 @@
+body {
+  background-color: #eee;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+}
+.text-lg {
+  font-size: 2em;
+}
+.text-sm {
+  font-size: 0.75em;
+}
+
+.note-input,
+.expanding-wrapper {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: none;
+}
+.note-output {
+  display: block;
+}
+
+.panel-body {
+  padding: 30px 30px 15px 30px;
+}
+  .panel-body:hover {
+    cursor: pointer;
+  }
+.panel-footer {
+  display: none;
+}
+.editing .note-input,
+.editing .expanding-wrapper {
+  display: block;
+  outline: 0px !important;
+  -webkit-appearance:none;
+  border: none;
+  box-shadow: none;
+}
+.editing .panel-footer {
+  display: block;
+  background-color: #fff;
+}
+
+.buttons-left,
+.buttons-right {
+  width: 50%;
+  display: inline-block;
+}
+.buttons-left {
+  padding-right: 5px;
+}
+.buttons-right {
+  padding-left: 5px;
+}
+
+.editing .remove-note,
+.editing .done-note {
+  width: 100%;
+  font-size: 1.1em;
+}
+.editing .note-output {
+  display: none;
+}
+
+#add-note {
+  width: 100%;
+  font-size: 1.1em;
+}

@@ -92,7 +92,8 @@ $(document).ready(function() {
       if (this.collection.length === 0) {
         // Defaults if there are no notes
         var welcome1 = '# Notes for Mobile\nCreated by [Bill Mei](http://www.kortaggio.com) using Backbone.js, jQuery, and Bootstrap.' +
-          '\n\n**Edit any note (including this one!) by clicking on it.** Add new notes with the "Add Note" button below.';
+          '\n\n**Edit any note (including this one!) by tapping on it.**' +
+          'Add new notes with the "Add Note" button below. Notes persist in localStorage so if your notes will be saved here as long as don\'t clear your cache.';
         var welcome2 = '## Markdown Support\nNotes support [markdown](https://help.github.com/articles/markdown-basics/), which means you can do **bold**, *italics*, and even fancy stuff like:\n'+
           '\n- Make a list for to-dos' +
           '\n- ~~Check off stuff you\'ve completed~~' +

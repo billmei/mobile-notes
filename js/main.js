@@ -22,11 +22,12 @@ $(document).ready(function() {
       'click .remove-note' : 'remove',
       'focus .note-input' : 'edit',
       'click .panel-body' : 'edit',
-      'click .done-note' : 'close',
+      'click .cancel-note' : 'cancel',
+      'click .save-note' : 'close'
     },
 
     initialize: function() {
-      _.bindAll(this, 'render', 'unrender', 'remove', 'edit');
+      _.bindAll(this, 'render', 'unrender', 'remove', 'edit', 'cancel');
 
       this.model.bind('change', this.render);
       this.model.bind('remove', this.unrender);
@@ -38,8 +39,9 @@ $(document).ready(function() {
           '<textarea class="note-input expanding">' + this.model.get('markdown') + '</textarea>'+
           '<div class="note-output">' + this.model.get('rendered_html') + '</div>' +
         '</div><div class="panel-footer">'+
-          '<div class="buttons-left"><button class="btn btn-danger remove-note"><i class="fa fa-times"></i> Remove</button></div>' +
-          '<div class="buttons-right"><button class="btn btn-success done-note"><i class="fa fa-check"></i> Done</button></div>' +
+          '<div class="buttons-inline"><button class="btn btn-danger remove-note"><i class="fa fa-trash"></i> Remove</button></div>' +
+          '<div class="buttons-inline"><button class="btn btn-primary cancel-note"><i class="fa fa-times"></i> Cancel</button></div>' +
+          '<div class="buttons-inline"><button class="btn btn-success save-note"><i class="fa fa-check"></i> Save</button></div>' +
         '</div>'
       );
       return this;
@@ -50,12 +52,23 @@ $(document).ready(function() {
     },
 
     edit: function() {
+      var textarea = this.$('.note-input');
+      var oldVal = textarea.val();
+
+      textarea.expanding();
       this.$el.addClass('editing');
-      var inputBox = this.$('.note-input');
-      inputBox.expanding();
-      var oldVal = inputBox.val();
-      if (inputBox[0] !== document.activeElement) {
-        inputBox.focus().val('').val(oldVal);
+      if (textarea[0] !== document.activeElement) {
+        textarea.focus().val('').val(oldVal);
+      }
+    },
+
+    cancel: function() {
+      // Close without saving
+      if (!this.model.get('rendered_html')) {
+        this.remove();
+      } else {
+        this.$('.note-input').val(this.model.get('markdown')).change();
+        this.$el.removeClass('editing');
       }
     },
 

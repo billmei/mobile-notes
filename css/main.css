@@ -51,20 +51,14 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #fff;
 }
 
-.buttons-left,
-.buttons-right {
-  width: 50%;
+.buttons-inline {
+  width: 33.3333333333%;
   display: inline-block;
-}
-.buttons-left {
   padding-right: 5px;
-}
-.buttons-right {
   padding-left: 5px;
 }
 
-.editing .remove-note,
-.editing .done-note {
+.editing .buttons-inline .btn {
   width: 100%;
   font-size: 1.1em;
 }

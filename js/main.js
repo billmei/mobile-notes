@@ -39,9 +39,9 @@ $(document).ready(function() {
           '<textarea class="note-input expanding">' + this.model.get('markdown') + '</textarea>'+
           '<div class="note-output">' + this.model.get('rendered_html') + '</div>' +
         '</div><div class="panel-footer">'+
-          '<div class="buttons-inline"><button class="btn btn-danger remove-note"><i class="fa fa-trash"></i> Remove</button></div>' +
-          '<div class="buttons-inline"><button class="btn btn-primary cancel-note"><i class="fa fa-times"></i> Cancel</button></div>' +
-          '<div class="buttons-inline"><button class="btn btn-success save-note"><i class="fa fa-check"></i> Save</button></div>' +
+          '<div class="buttons-inline"><button class="btn btn-danger remove-note"><i class="fa fa-trash"></i><span class="button-text"> Remove</span></button></div>' +
+          '<div class="buttons-inline"><button class="btn btn-primary cancel-note"><i class="fa fa-times"></i><span class="button-text"> Cancel</span></button></div>' +
+          '<div class="buttons-inline"><button class="btn btn-success save-note"><i class="fa fa-check"></i><span class="button-text"> Save</span></button></div>' +
         '</div>'
       );
       return this;

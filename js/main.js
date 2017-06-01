@@ -104,7 +104,7 @@ $(document).ready(function() {
       this.collection.fetch();
       if (this.collection.length === 0) {
         // Defaults if there are no notes
-        var welcome1 = '# Notes for Mobile\n**[Fork this project on GitHub](https://github.com/Kortaggio/mobile-notes)**!' +
+        var welcome1 = '# Notes for Mobile\n**[Fork this project on GitHub](https://github.com/billmei/mobile-notes)**!' +
           '\n\n**Edit any note (including this one!) by tapping on it.** ' +
           'Add new notes with the "Add Note" button below. Notes persist in local storage so your notes will be saved here as long as you don\'t clear your cache.';
         var welcome2 = '## Markdown Support\nNotes support [markdown](https://help.github.com/articles/markdown-basics/), which means you can do **bold**, *italics*, and even fancy stuff like:\n'+

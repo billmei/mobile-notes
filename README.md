@@ -1,6 +1,6 @@
 # Notes app for mobile
 
-Demo here: [https://kortaggio.github.io/mobile-notes](https://kortaggio.github.io/mobile-notes)
+Demo here: [https://billmei.github.io/mobile-notes](https://billmei.github.io/mobile-notes)
 
 Built with Backbone.js, jQuery, and Bootstrap.
 
